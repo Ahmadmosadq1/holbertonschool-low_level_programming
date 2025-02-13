@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -std=gnu89 $CFILE -o main.o
+gcc -c -wall $CFILE -o main.o
