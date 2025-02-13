@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc $CFILE -c -Wall -Werror -Wextra -pedantic -std=gnu89 -o "${CFILE%.c}.s" 
