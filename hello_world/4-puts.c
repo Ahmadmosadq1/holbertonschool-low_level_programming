@@ -1,17 +1,16 @@
 #include <stdio.h>
-/*
- * main- the entry point of the function
+/**
+ * main - Entry point
  *
- * Desciption:This scipt is about running a string using puts function
- *
- * Return: ends with 0 (sucess)
+ * Description: This function prints a string using puts.
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 
 {
 	/*printing using puts function*/
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle,\n");
 	return (0);
 }
 
