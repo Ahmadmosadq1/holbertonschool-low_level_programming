@@ -9,8 +9,11 @@
 int main()
 
 {
-	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	int year = 2015;  // Store the year as an integer
+
+	printf("and that piece of art is useful\" - Dora Korpar, %d-10-19\n", year);
 	
 	return (1);
+
 
 }
