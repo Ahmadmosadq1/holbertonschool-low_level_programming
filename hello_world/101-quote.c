@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: This function prints a string using printf.
+ * Description: This function prints a string using write.
  * Return: Always 0 (Success)
  */
 
