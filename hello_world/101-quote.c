@@ -1,4 +1,7 @@
-#include <stdio.h>
+#include <unistd.h>
+
+#include <string.h>
+
 /**
  * main - Entry point
  *
@@ -6,14 +9,11 @@
  * Return: Always 0 (Success)
  */
 
-int main()
-
+int main(void)
 {
-	int year = 2015;  // Store the year as an integer
+	char mes[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	printf("and that piece of art is useful\" - Dora Korpar, %d-10-19\n", year);
-	
+	write(1, mes, strlen(mes));
+
 	return (1);
-
-
 }
