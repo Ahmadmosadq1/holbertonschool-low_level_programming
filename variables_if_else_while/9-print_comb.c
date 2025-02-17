@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	int num = 0;
+	int num;
 
-	while (num <= 9)
-	{
-	if (num == 9)
+	for (num = 0; num <= 9; num++)
 	{
 	putchar(num + '0');
-	break;
-	}
-	else
+	if (num < 9)
 	{
-	putchar(num + '0');
 	putchar(',');
 	putchar(' ');
-	num++;
+	continue;
+	}
+	else if (num == 9)
+	{
+	continue;
 	}
 	}
+	putchar('\n');
 	return (0);
 }
