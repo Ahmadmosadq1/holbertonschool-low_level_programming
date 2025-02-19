@@ -1,14 +1,15 @@
 #include "main.h"
 /**
-* _islower(int c) - Entry point
-*
-* Description: This function checks if the letter is capital or small
+*_islower - Entry point
+* c_islower - function member
+* description: this function takes input and saved in int "c" parameter
+* @c: a parameter in the function
 * Return: Always 0 (Success)
 */
 
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z' )
+	if (c >= 'a' && c <= 'z')
 	{
 	return (1);
 	}
