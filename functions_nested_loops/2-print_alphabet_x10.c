@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * void print_alphabet_x10(void); - Entery point. 
- *
- * Description: t prints the all aplphabets 10 times follwed by new line
- * Return: no need as it is a void function
- */
+*print_alphabet_x10 - Entery point.
+*
+*Description: t prints the all aplphabets 10 times follwed by new line
+*Return: no need as it is a void function
+*/
 
 void print_alphabet_x10(void)
 {
@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 	int counter = 0;
 
 	while (counter < 10)
-	{	
+	{
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
 	_putchar(alpha);
