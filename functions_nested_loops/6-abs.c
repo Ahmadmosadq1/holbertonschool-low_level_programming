@@ -4,7 +4,7 @@
  * _abs - Entry point
  *
  * Description: 'the program prints absulute value
- * @int: describe the parameter
+ * @num: describe the parameter
  *
  * Return: Always 0 (Success)
  */
