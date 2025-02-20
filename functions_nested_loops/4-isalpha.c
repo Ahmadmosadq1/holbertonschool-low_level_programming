@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * main - Entry point
- * 
- * Description: 'the programe checks if c is a letter or not
- * @parameter: c
- * 
- * Return: Always 0 (Success)
+ *_isalpha - Entry point
+ *
+ *Description: 'the programe checks if c is a letter or not
+ *@c: the parameters
+ *
+ *Return: Always 0 (Success)
  */
 
 int _isalpha(int c)
