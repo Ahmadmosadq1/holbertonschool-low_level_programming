@@ -22,7 +22,7 @@ void print_line(int n)
 		break;
 		}
 		else
-		_putchar('-');
+		_putchar('_');
 	}
 	_putchar('\n');
 }
