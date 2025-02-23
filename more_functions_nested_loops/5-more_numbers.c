@@ -17,20 +17,18 @@ void more_numbers(void)
 	{
 	for (num = 0; num < 15; num++)
 	{
-	_putchar((num / 10) * '1');
-	/*
-	 * form 0 to 9 when divided by 10
-	 * it will equql to '0' which is
-	 * a null value.
-	 *it will print 1 form 10 to 11
-	 */
-	_putchar((num % 10) + '0');
-	/*
-	 * this will handle the
-	 * second digigt.
-	 */
+		if (num > 9)
+		{
+		_putchar((num / 10) + '0');
+
+		/*
+		 * only if num > 9,
+		 * do the above condition.
+		 */
+		}
+		_putchar((num % 10) + '0');
 	}
 	_putchar('\n');
 	}
-
 }
+
