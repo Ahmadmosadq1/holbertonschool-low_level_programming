@@ -3,7 +3,8 @@
  * mul - Entry point
  *
  * Description: 'Multiplying two number using mul function'
- * @ab:the parameter
+ * @a : parameter
+ * @b:the parameter
  *
  * Return: Always 0 (Success)
  */
