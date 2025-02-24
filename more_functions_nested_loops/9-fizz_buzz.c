@@ -13,7 +13,7 @@ int main(void)
 {
 	int count;
 
-	for (count = 1; count < 101; count++)
+	for (count = 1; count <= 100; count++)
 	{
 		if (count % 3 == 0 && count % 5 == 0)
 		{
@@ -30,18 +30,14 @@ int main(void)
 			printf("Fizz");
 			printf(" ");
 		}
-		else if (count == 100) 
-		{
-			printf("%d", count);
-		}
+	
 		else
 		{
 			printf("%d", count);
 			printf(" ");
 		}
-		
-}
 
+}
 printf("\n");
 return (0);
 }
