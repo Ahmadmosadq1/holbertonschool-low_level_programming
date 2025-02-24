@@ -17,25 +17,18 @@ int main(void)
 	{
 		if (count % 3 == 0 && count % 5 == 0)
 		{
-			printf("FizzBuzz");
-			printf(" ");
+			printf("FizzBuzz ");
 		}
 		else if (count % 5 == 0)
 		{
-			printf("Buzz");
-			printf(" ");
-
+			printf("Buzz ");
 		}
 		else if (count % 3 == 0)
 		{
-			printf("Fizz");
-			printf(" ");
+			printf("Fizz ");
 		}
 		else
 		{
-			printf("%d", count);
-			printf(" ");
-
 	}
 	return (0);
 }
