@@ -27,10 +27,14 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
-		else
+		else if (count == 100)
 		{
-	}
-	return (0);
+			printf("%d",count);
+		}
+		else 
+		{
+			printf("%d ", count);
+		}
 }
-
-
+return (0);
+}
