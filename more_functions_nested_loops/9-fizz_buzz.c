@@ -20,15 +20,15 @@ int main(void)
 			printf("FizzBuzz");
 			printf(" ");
 		}
-		else if (count % 3 == 0)
+		else if (count % 5 == 0)
 		{
-			printf("Fizz");
+			printf("Buzz");
 			printf(" ");
 
 		}
-		else if (count % 3 == 0 && count % 5 == 0)
+		else if (count % 3 == 0)
 		{
-			printf("Buzz");
+			printf("Fizz");
 			printf(" ");
 		}
 		else
