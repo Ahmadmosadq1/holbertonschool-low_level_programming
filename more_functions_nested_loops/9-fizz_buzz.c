@@ -32,7 +32,10 @@ int main(void)
 			printf(" ");
 		}
 		else
-			printf("%d ", count);
+		{
+			printf("%d", count);
+			printf(" ");
+
 	}
 	return (0);
 }
