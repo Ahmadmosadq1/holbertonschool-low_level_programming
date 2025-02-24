@@ -30,13 +30,18 @@ int main(void)
 			printf("Fizz");
 			printf(" ");
 		}
+		else if (count == 100) 
+		{
+			printf("%d", count);
+		}
 		else
 		{
 			printf("%d", count);
 			printf(" ");
 		}
+		
 }
-printf("\b\b");
+
 printf("\n");
 return (0);
 }
