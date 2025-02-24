@@ -15,28 +15,24 @@ int main(void)
 
 	for (count = 1; count <= 100; count++)
 	{
-		if (count == 0)
-		{
-			printf("%d", count);
-		}
-		else if (count % 3 == 0 && count % 5 == 0)
+		 if (count % 3 == 0 && count % 5 == 0)
 		{
 			printf("FizzBuzz");
 			printf(" ");
 		}
-		else if (count % 5 == 0)
+		 else if (count % 5 == 0)
 		{
 			printf("Buzz");
 			printf(" ");
 		}
-		else if (count % 3 == 0)
+		 else if (count % 3 == 0)
 		{
 			printf("Fizz");
 			printf(" ");
 		}
 
 	
-		else
+		 else
 		{
 			printf("%d", count);
 			printf(" ");
