@@ -30,6 +30,11 @@ int main(void)
 			printf("Fizz");
 			printf(" ");
 		}
+		else if ( count == 100)
+		{
+			printf("%d", count);
+		}
+
 	
 		else
 		{
