@@ -36,7 +36,7 @@ int main(void)
 			printf(" ");
 		}
 }
-printf("\b");
+printf("\b\b");
 printf("\n");
 return (0);
 }
