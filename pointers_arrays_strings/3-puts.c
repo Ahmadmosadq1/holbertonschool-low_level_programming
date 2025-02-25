@@ -5,7 +5,7 @@
  *
  * Description :printinga string from an array
  *
- * @str
+ * @str: parameter
  *.
  * Return: void.
  */
