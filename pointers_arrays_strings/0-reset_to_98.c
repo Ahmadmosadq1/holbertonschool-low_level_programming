@@ -1,5 +1,4 @@
-#ifndef "main.h"
-#define "main.h"
+#include "main.h"
 
 /**
  * reset_to_98 - Entry point
