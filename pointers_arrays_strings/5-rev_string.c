@@ -15,14 +15,18 @@ void rev_string(char *s)
 {
 	/*
 	 * we first find the length
-	 * we can use our function _strlen()
 	 * we will first do the loop
 	 * from both sides , the first
 	 * and last pointer.
 	 */
-	int i = _strlen(s);
+	int i = 0;
 	int j = 0;
 	char temp;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
 
 	for (j = 0; j < i / 2 ; j++)
 	{
