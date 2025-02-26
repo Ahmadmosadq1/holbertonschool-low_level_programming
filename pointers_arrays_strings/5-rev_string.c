@@ -11,35 +11,23 @@
  */
 
 void rev_string(char *s)
+
 {
-	int i = 0;/*
-		 * to initilize the pointer
-		 */
 	/*
-	 * we first move the pointer to the last index
+	 * we first find the length
+	 * we can use our function _strlen()
+	 * we will first do the loop
+	 * from both sides , the first
+	 * and last pointer.
 	 */
-	while (s[i] != '\0')
-	{
-		s++;
-	}
-	/*
-	 * now that we moved the pointer to (s-1)
-	 * we shall itarate backwards and printing
-	 * along the way
-	 */
+	int i = _strlen(s);
+	int j = 0;
+	char temp;
 
-	for (s = s - 1; s[i] > 0; s--)
+	for (j = 0; j < i / 2 ; j++)
 	{
-		_putchar(*s);
-
+		temp = s[j];
+		s[j] = s[i - j - 1];
+		s[i - j - 1] = temp;
 	}
-	/*
-	 * the (*s) is the value of the current index
-	 * the pointer points to
-	 */
-	_putchar('\n');
 }
-
-
-
-
