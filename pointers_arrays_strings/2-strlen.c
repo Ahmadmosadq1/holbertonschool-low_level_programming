@@ -6,28 +6,18 @@
  *
  * Description: calculate the length of a string.
  *
- * @s
+ * @s: the parameters
  *.
  * Return: void.
  */
 
 int _strlen(char *s)
 {
-	int i;
-	for (i=1; ; i++)/* 
-			 * increment looping with condition inside
-			 * ++s is moving the pointer in the array in each loop
-			 *
-			 * the loop will terminate if the pointer reached
-			 * to the last defualt value (null = "/0")
-			 */
-	{
-	++s;
+	int i = 0;
 
-	if (*s == '\0')
+	while (*s++)
 	{
-		break;
+		i++;
 	}
-}
 return (i);
 }
