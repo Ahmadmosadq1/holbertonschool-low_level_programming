@@ -19,14 +19,17 @@ void puts_half(char *str)
 		i++;
 	}
 	if (i % 2 == 1)
-		j = (i+1)/2;
+	{
+		j = (i-1)/2;
+		j = j + 1;
+	}
 	else if ( i % 2 == 0)
 		j = i/2;
 
 
 	/*printing half the string*/
 
-	for (j = i / 2; j < i; j++)
+	for (; j < i; j++)
 	{
 		_putchar(str[j]);
 	}
