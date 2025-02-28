@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * puts_half - Entry point
+ * *_strcat - Entry point
  *
- * Description :prints half of a string.
+ * Description :connect two strings using _strcat().
  *.
- *@str : the parameters.
- 
- * Return: void.
+ * @dest : destination array.
+ * @src : source array
+ * Return: to dest.
  */
 
 char *_strcat(char *dest, char *src)
