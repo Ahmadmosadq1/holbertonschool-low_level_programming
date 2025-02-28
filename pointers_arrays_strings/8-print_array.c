@@ -2,25 +2,26 @@
 #include <stdio.h>
 
 /**
- * puts_half - Entry point
+ * print_array- Entry point
  *
- * Description :prints half of a string.
+ * Description :prints the elemnts of the array.
  *.
- *@str : the parameters.
-
+ *@a : the array
+ *@n : the number of the array
+ *
  * Return: void.
  */
 
 void print_array(int *a, int n)
 {
 	int i = 0;
-	while ( i < n-1)
+
+	while (i < n - 1)
 	{
 		printf("%d, ", a[i]);
 		i++;
-		if (i == n-1)
-			printf("%d",a[i]);
-
+		if (i == n - 1)
+			printf("%d", a[i]);
 	}
 	printf("\n");
 }
