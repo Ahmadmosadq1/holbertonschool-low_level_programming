@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * puts_half - Entry point
+ * _strcpy - Entry point
  *
- * Description :prints half of a string.
+ * Description :copies the elements of one array tp another array
  *.
- *@str : the parameters.
- 
+ *@src : the source array.
+ *@dest : the destination array
+ *
  * Return: void.
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	int i =0;
-	
+	int i = 0;
+
 	while (src[i] != '\0') /*copping from src to des*/
 	{
 		dest[i] = src[i];
@@ -24,6 +25,3 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 
 }
-
-		
-
