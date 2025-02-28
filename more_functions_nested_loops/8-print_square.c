@@ -11,24 +11,21 @@
 
 void print_square(int size)
 {
-	int height;
-	int base;
+    int height, base;
 
-	for (height = 0; height < size; height++)
-	{
-		if ( size <= 0)
-		{
-			_putchar('\n');
-			break;
-		}
-		else
-		{
-		for (base = 0; base < size; base++)
-		{
-			_putchar('#');
-		}
-		_putchar('\n');
-		}
-	}
+    if (size <= 0)  // Move the condition outside the loop
+    {
+        putchar('\n');
+        return;
+    }
+
+    for (height = 0; height < size; height++)
+    {
+        for (base = 0; base < size; base++)
+        {
+            putchar('#');
+        }
+        putchar('\n');
+    }
 }
 
