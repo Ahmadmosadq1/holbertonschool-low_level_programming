@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 #include <stdio.h>
 /**
  * main - Entry point
@@ -32,6 +32,10 @@ int main(void)
 		 {
 			 printf("%d ", count);
 		 }
+			if (count != 100)
+			{
+				printf(" ");
+			}
 
 }
 printf("\n");
