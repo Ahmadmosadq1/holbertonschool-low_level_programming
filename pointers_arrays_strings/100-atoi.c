@@ -14,7 +14,7 @@
 
 int _atoi(char *s)
 {
-	int b = 0;i
+	int b = 0;
 	unsigned int ni = 0;
 	int min = 1;
 	int init = 0;
