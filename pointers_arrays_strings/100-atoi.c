@@ -1,24 +1,21 @@
 #include "main.h"
 
-
 /**
- * puts_half - Entry point
+ * _atoi- Entry point
  *
  * Description :prints half of a string.
  *.
- *@s : parameter.
- 
+ * @s: parameter.
  * Return: void.
  */
-
-
 int _atoi(char *s)
 {
 	int b = 0;
 	unsigned int ni = 0;
 	int min = 1;
 	int init = 0;
-       	while (s[b])
+
+	while (s[b])
 	{
 		if (s[b] == 45)
 		{
@@ -32,7 +29,7 @@ int _atoi(char *s)
 		}
 		if (init == 1)
 		{
-		       	break;
+			break;
 		}
 		b++;
 	}
