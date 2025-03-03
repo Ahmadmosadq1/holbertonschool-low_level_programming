@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 		{
 			break;
 		}
-		else if (*s == '\0')
+		else if (c == '\0')
 		{
 			return (s);
 			return (NULL);
