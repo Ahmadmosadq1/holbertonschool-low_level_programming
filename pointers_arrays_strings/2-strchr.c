@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  *_strchr- Entry point
@@ -13,13 +14,16 @@
 
 char *_strchr(char *s, char c)
 {
-	while (s++)
+	while (*s != '\0' )
 	{
 		if (*s == c)
-		break;
-		else
 		{
-		return (NULL);
+			break;;
+		}
+		else if (*s == '\0')
+			return (NULL);
+	s++;
 	}
 	return (s);
 }
+
