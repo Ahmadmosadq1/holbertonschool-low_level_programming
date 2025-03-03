@@ -18,10 +18,13 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			break;;
+			break;
 		}
 		else if (*s == '\0')
+		{
+			return (s);
 			return (NULL);
+		}
 	s++;
 	}
 	return (s);
