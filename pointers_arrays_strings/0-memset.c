@@ -14,24 +14,12 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
-	char used_string;
-	char the_remaining;
+    unsigned int i;
 
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	/*calculating the length*/
+    for (i = 0; i < n; i++)
+    {
+        s[i] = b;
+    }
 
-	used_string = i + 1; /*including the first string with the null value*/
-	the_remaining = n - used_string; /* excluding the used*/
-	while (the_remaining--)
-	{
-		*s = (unsigned char)b;
-	}
-	return (s);
+    return (s);
 }
-
-
-
