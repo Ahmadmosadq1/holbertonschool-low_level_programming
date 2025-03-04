@@ -20,8 +20,12 @@ char *_strstr(char *haystack, char *needle)
 	{
 		while (*haystack != '\0')
 		{
-			if (*needle == *haystack)
-				return (needle);
+			if (*haystack == ' ')
+			{
+				haystack++;
+				if (*haystack == *needle)
+					return (haystack);
+			}
 			haystack++;
 		}
 		haystack = haystack_save;
