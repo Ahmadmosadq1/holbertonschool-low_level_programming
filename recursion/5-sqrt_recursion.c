@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include  <stdlib.h>
 
+int _sqrt_helper(int n, int y);
+
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
  * @n: The number to find the square root of.
  *
  * Return: The natural square root, or -1 if no natural root exists.
  */
+
+
 int _sqrt_recursion(int n)
 {
-	int y = 0;
 
 	if (n < 0)
 		return (-1);
 
-	return (_sqrt_helper(n, y));
+	return (_sqrt_helper(n, 1));
 }
 
 /**
