@@ -1,16 +1,12 @@
-#include "main.h"
+#include <stdio.h>
+#include  <stdlib.h>
 
 /**
- * _sqrt_recursion - Entry point.
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: The number to find the square root of.
  *
- * @n : the number to find its square root
- *
- * Description: This function prints a string using puts.
- * Return: Always 0 (Success)
+ * Return: The natural square root, or -1 if no natural root exists.
  */
-
-/* making a function helper*/
-
 int _sqrt_recursion(int n)
 {
 	int y = 0;
@@ -21,12 +17,18 @@ int _sqrt_recursion(int n)
 	return (_sqrt_helper(n, y));
 }
 
+/**
+ * _sqrt_helper - Recursively finds the natural square root.
+ * @n: The number to find the square root of.
+ * @y: The current test number.
+ *
+ * Return: The square root, or -1 if no natural root exists.
+ */
 int _sqrt_helper(int n, int y)
 {
-
 	if (y * y > n)
 		return (-1);
-	if (y * y == n )
+	if (y * y == n)
 		return (y);
 	return (_sqrt_helper(n, y + 1));
 }
