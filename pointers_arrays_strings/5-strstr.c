@@ -14,22 +14,24 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *haystack_save = haystack;
+	char *hay_coun;
+	char *need_count;
 
-	while (*needle != '\0')
+	if (*needle == '\0')
+		return (haystack);
+
+	while (*haystack != '\0')
 	{
-		while (*haystack != '\0')
+		hay_coun = haystack;
+		need_count = needle;
+		while (*hay_coun != '\0' && *need_count != '\0' && *hay_coun == *need_count)
 		{
-			if (*haystack == ' ')
-			{
-				haystack++;
-				if (*haystack == *needle)
-					return (haystack);
-			}
-			haystack++;
+			hay_coun++;
+			need_count++;
 		}
-		haystack = haystack_save;
-		needle++;
+		if (*need_count == '\0')
+			return (haystack);
+		haystack++;
 	}
 	return (NULL);
 }
