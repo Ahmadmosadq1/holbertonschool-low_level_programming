@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	/* returing the pointer to space AKA heap*/
 
 	arr = malloc((j + 1) * sizeof(char));
-	if (str == '\0')
+	if (str == NULL)
 		return (NULL);
 	if (j == 0)
 		return (NULL);
