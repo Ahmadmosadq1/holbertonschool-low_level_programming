@@ -30,7 +30,11 @@ char *_strdup(char *str)
 
 	arr = malloc((j + 1) * sizeof(char));
 	for (i = 0; i < j; i++)
+	{
+		if (arr == NULL)
+			return (NULL);
 		arr[i] = str[i];
+	}
 	arr[i] = '\0';
 	if (j == 1)
 		return (NULL);
