@@ -16,23 +16,24 @@ char *_strdup(char *str)
 	int i = 0;
 	int j = 0;
 	char *arr;
+	
+	if (str == NULL)
+		return NULL;
 
 	/* finding the string length*/
 	while (str[i])
 	{
 		j++;
+		i++;
 	}
 	/* returing the pointer to space AKA heap*/
 
 	arr = malloc((j + 1) * sizeof(char));
-	if (arr == NULL)
-                return ('\0');
-	if (arr == NULL)
-		return (NULL);
 	for (i = 0; i < j; i++)
 		arr[i] = str[i];
 	arr[i] = '\0';
-
+	if (j == 0)
+		return (NULL);
 return (arr);
 }
 
