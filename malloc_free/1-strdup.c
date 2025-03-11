@@ -21,6 +21,7 @@ char *_strdup(char *str)
 	while (str[i])
 	{
 		j++;
+	}
 	/* returing the pointer to space AKA heap*/
 
 	arr = malloc((j + 1) * sizeof(char));
@@ -31,7 +32,7 @@ char *_strdup(char *str)
 	for (i = 0; i < j; i++)
 		arr[i] = str[i];
 	arr[i] = '\0';
-}
+
 return (arr);
 }
 
