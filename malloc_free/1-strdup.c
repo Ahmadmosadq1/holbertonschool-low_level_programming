@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	char *arr;
 
 	/* finding the string length*/
-
 	while (str[i])
 	{
 		j++;
@@ -26,9 +25,9 @@ char *_strdup(char *str)
 
 	arr = malloc((j + 1) * sizeof(char));
 	if (str == NULL)
-		return (NULL);
-	if (arr == NULL)
-		return (NULL);
+                return (NULL);
+        if (arr == NULL)
+                return (NULL);
 	for (i = 0; i < j; i++)
 		arr[i] = str[i];
 	arr[i] = '\0';
