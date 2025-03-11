@@ -24,9 +24,7 @@ char *_strdup(char *str)
 	/* returing the pointer to space AKA heap*/
 
 	arr = malloc((j + 1) * sizeof(char));
-	if (str == NULL)
-                return (NULL);
-        if (arr == NULL)
+	if (str == NULL || arr == NULL)
                 return (NULL);
 	for (i = 0; i < j; i++)
 		arr[i] = str[i];
