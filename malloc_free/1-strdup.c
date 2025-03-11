@@ -16,10 +16,9 @@ char *_strdup(char *str)
 	int i = 0;
 	int j = 0;
 	char *arr;
-	
-	if (str == NULL)
-		return NULL;
 
+	if (str == NULL)
+		return( NULL);
 	/* finding the string length*/
 	while (str[i])
 	{
