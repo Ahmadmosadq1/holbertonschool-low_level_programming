@@ -3,10 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * free_grid - Entry point
  *
- * Description: This function prints a string using puts.
- * Return: Always 0 (Success)
+ * Description: This function frees memory of 2d array.
+ * @grid : 2d array.
+ * @height : array height.
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
