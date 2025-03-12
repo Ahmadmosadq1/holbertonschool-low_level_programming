@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	char *arr;
 
 	if (str == NULL)
-		return( NULL);
+		return (NULL);
 	/* finding the string length*/
 	while (str[i])
 	{
