@@ -3,10 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * alloc_grid - Entry point
  *
- * Description: This function prints a string using puts.
- * Return: Always 0 (Success)
+ * Description: This function creats 2d array using malloc.
+ * @width : the width of the array.
+ * @height : the height of the arry
+ * Return: arr value.
  */
 
 int **alloc_grid(int width, int height)
@@ -18,12 +20,11 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	arr = malloc(height * sizeof(int*));
+	arr = malloc(height * sizeof(int *));
 	if (width == 0 && height == 0)
 		return (NULL);
 	if (arr == NULL)
 		return (NULL);
-	
 	for (i = 0; i < height; i++)
 {
 		arr[i] = malloc(width * sizeof(int));
