@@ -32,6 +32,7 @@ int **alloc_grid(int width, int height)
 		while (i--)
 			free(arr[i]);
 		}
+		free(arr);
 }
 
 	return (arr);
