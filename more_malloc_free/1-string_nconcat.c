@@ -20,9 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[j])
 		j++;
 
-	if (s1 == '\0')
+	if (s1 == NULL)
                 s1 = "";
-        if (s2 == '\0')
+        if (s2 == NULL)
                 s2 = "";
 	/*allocating heap memory for the both sizes + '\0'*/
 	arr = malloc((i + n + 1) * sizeof(char));
