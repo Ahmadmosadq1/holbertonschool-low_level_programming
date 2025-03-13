@@ -23,9 +23,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	arr = malloc((i + n + 1) * sizeof(char));
 	
 	if (s1[0] == '\0')
-		s1[0] = "";
+		*s1[0] = "";
 	if (s2[0] == '\0')
-		s2[0] = "";
+		*s2[0] = "";
 	if (arr == NULL)
 		return (NULL);
 	/*doing the conocating string s1*/
