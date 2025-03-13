@@ -3,21 +3,25 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * main - Entry point
+ * _calloc - Entry point
  *
- * Description: This function prints a string using puts.
+ * Description: This function sets the memory to zeros
+ * @nmemb : number of indexs
+ * @size : size of each index.
  * Return: Always 0 (Success)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
 	char *arr;
-	char *
 
-	*arr = malloc(nmemb * size);
+	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
+		arr[i] = 0;
+	return (arr);
+}
 
