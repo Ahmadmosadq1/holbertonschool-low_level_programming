@@ -2,9 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry point
+ * string_nconcat - Entry point
  *
- * Description: This function prints a string using puts.
+ * Description: This function conaecates two strings
+ * @s1 : first string.
+ * @s2 : second string.
+ * @n : the size of the needed s2.
  * Return: Always 0 (Success)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -14,11 +17,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int count1;
 	unsigned int count2;
 	char *arr;
-	
+
 	if (s1 == NULL)
-                s1 = "";
-        if (s2 == NULL)
-                s2 = "";
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	while (s1[i])
 		i++;
@@ -27,7 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	/*allocating heap memory for the both sizes + '\0'*/
 	arr = malloc((i + n + 1) * sizeof(char));
-	
 	if (arr == NULL)
 		return (NULL);
 	/*doing the conocating string s1*/
