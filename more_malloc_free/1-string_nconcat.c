@@ -22,10 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*allocating heap memory for the both sizes + '\0'*/
 	arr = malloc((i + n + 1) * sizeof(char));
 	
-	if (s1[0] == '\0')
-		*s1[0] = "";
-	if (s2[0] == '\0')
-		*s2[0] = "";
+	if (s1 == '\0')
+		s1 = "";
+	if (s2 == '\0')
+		s2 = "";
 	if (arr == NULL)
 		return (NULL);
 	/*doing the conocating string s1*/
