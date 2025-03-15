@@ -31,6 +31,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(new_dog->name);
 		free(new_dog);
+		return (NULL);
 	}
 	_strncpy(new_dog->name, name, _strlen(name));
 	new_dog->name[_strlen(name)] ='\0';
@@ -41,12 +42,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(new_dog->owner);
 		free(new_dog);
+		return (NULL);
 	}
 	_strncpy(new_dog->owner, owner, _strlen(owner));
 	new_dog->owner[_strlen(name)] ='\0';
 
 	/*assigning age*/
-	new_dog->age = ((int)(age * 10)) / 10.0;
+	new_dog->age = (float)((int)(age * 100 + 0.5) / 100.0);
 	return (new_dog);
 }
 
