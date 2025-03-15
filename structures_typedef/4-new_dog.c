@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	_strncpy(new_dog->name, name, _strlen(name));
-	new_dog->name[_strlen(name)] ='\0';
+	new_dog->name[_strlen(name)] = '\0';
 
 	/*allocating memroy sixe for owner and make a copy*/
 	new_dog->owner = malloc(_strlen(owner) + 1);
@@ -46,7 +46,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	_strncpy(new_dog->owner, owner, _strlen(owner));
-	new_dog->owner[_strlen(owner)] ='\0';
+	new_dog->owner[_strlen(owner)] = '\0';
 
 	/*assigning age*/
 	new_dog->age = age;
