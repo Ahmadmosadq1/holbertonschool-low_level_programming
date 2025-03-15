@@ -28,10 +28,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/*alloctaion memory size for name and make a copy*/
 	new_dog->name = malloc(_strlen(name) + 1);
 	_strncpy(new_dog->name, name, _strlen(name));
+	new_dog->name[_strlen(name)] ='\0';
 
 	/*allocating memroy sixe for owner and make a copy*/
 	new_dog->owner = malloc(_strlen(name) + 1);
 	_strncpy(new_dog->owner, owner, _strlen(owner));
+	new_dog->owner[_strlen(name)] ='\0';
 
 	/*assigning age*/
 	new_dog->age = age;
