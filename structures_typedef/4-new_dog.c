@@ -37,7 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->name[_strlen(name)] ='\0';
 
 	/*allocating memroy sixe for owner and make a copy*/
-	new_dog->owner = malloc(_strlen(name) + 1);
+	new_dog->owner = malloc(_strlen(owner) + 1);
 	if (new_dog->owner == NULL)
 	{
 		free(new_dog->owner);
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->owner[_strlen(name)] ='\0';
 
 	/*assigning age*/
-	new_dog->age = (float)((int)(age * 100 + 0.5) / 100.0);
+	new_dog->age = age;
 	return (new_dog);
 }
 
