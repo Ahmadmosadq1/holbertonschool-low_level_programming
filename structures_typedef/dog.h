@@ -6,9 +6,10 @@
  * @age: dog's age.
  * @owner: owner's name.
  *
+ *
  * Description: it is a struture contains dog's name, age and owner's name
  */
-struct dog 
+struct dog
 {
 	char *name;
 	float age;
