@@ -225,7 +225,6 @@
 
 ---
 
-This document provides structured explanations for **advanced pointer manipulation**, focusing on **memory management, character searching, and structured data printing**. 🚀
 
 
 
