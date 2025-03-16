@@ -2,7 +2,8 @@
 
 ## **0. Preprocessor**
 ### **Description:**
-Explain what this task does.
+This command will proccess the c file by deleting unrelated to complilation lines like comments.
+It is done with -E flag.
 
 ### **Command:**
 ```bash
