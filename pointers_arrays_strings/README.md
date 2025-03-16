@@ -223,7 +223,7 @@
   - Outer loop iterates through **rows (`j`)**.
   - Inner loop iterates through **elements in each row (`i`)**.
 
----
+
 
 
 
