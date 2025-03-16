@@ -96,8 +96,9 @@
 - **Important:**
   - Manually append the null character (`'\0'`) to `dest`, as it marks the end of the string in C.
  
-  ################################################################################################################################################################
-  # **Project: More Pointers, Arrays, and Strings**
+---
+
+# **Project: More Pointers, Arrays, and Strings**
 
 ## **Task 0: strcat**
 
