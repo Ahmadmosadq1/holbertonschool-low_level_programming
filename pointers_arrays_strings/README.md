@@ -95,6 +95,77 @@
 - Assign `dest[i] = src[i]` for each character.
 - **Important:**
   - Manually append the null character (`'\0'`) to `dest`, as it marks the end of the string in C.
+ 
+  ################################################################################################################################################################
+  # **Project: More Pointers, Arrays, and Strings**
+
+## **Task 0: strcat**
+
+### **Description:**
+- Initialize `i, j = 0` for the destination (`dest`) and source (`src`) arrays.
+- First, loop through the `dest` array **excluding the null character**.
+- Then, start another loop to append `src` to `dest`.
+- When entering the second loop, `dest` starts appending from the last value of `i` (after the first loop ends), while `j` starts from `0`.
+- This way, the first element of `src` is appended to the last element of `dest`.
+
+---
+
+## **Task 1: strncat**
+
+### **Description:**
+- To concatenate two strings, first move to the last element of the `dest` array, **excluding the null character**.
+- `dest` will have `i` positioned at the last element.
+- Then, loop through `src` and concatenate it to `dest`, **excluding the null character**.
+- At the end, append a **null character (`'\0'`)** to `dest`, as it is necessary for C to recognize the end of the string.
+
+---
+
+## **Task 2: strncpy**
+
+### **Description:**
+- Copy elements from `src` to `dest`. The variable `n` controls the number of elements copied.
+- Use a `while` loop to copy `src` to `dest`, **excluding the null character**.
+- If `n` is **smaller** than the size of `dest`, the remaining elements will be filled with null characters (`'\0'`).
+- If `n` is **larger** than `dest`, only the exact size is copied, and the rest of `n` is ignored—no extra null characters are needed.
+
+---
+
+## **Task 3: strcmp**
+
+### **Description:**
+- `strcmp` is a function that compares two strings **element by element** using their **ASCII values**.
+- A `while` loop is used for comparison.
+- Example: `_strcmp("Hello", "Hello")` compares each character (`H` with `H`, `e` with `e`, etc.).
+- If all values are equal, it returns `0`.
+- If any two elements differ in ASCII values, it returns the **difference between their values**:
+  - **Positive** if the first array is larger.
+  - **Negative** if the second array is larger.
+
+---
+
+## **Task 4: Reverse an Array**
+
+### **Description:**
+- To reverse a string, first loop through the array to reach the **last index**, **excluding the null character**.
+- Then, start a loop to move the pointer **in reverse (`--s`)**, printing each element from the last index to the first.
+- The loop continues as long as `s[i] > 0`, meaning it moves backward (`s[5] → s[4] → ... → s[0]`), and terminates when it reaches the beginning.
+
+---
+
+## **Task 5: Convert String to Uppercase**
+
+### **Description:**
+- To convert a **lowercase letter** to **uppercase**, subtract `32` from its ASCII value.
+- Use a `while` loop containing the **range of lowercase letters** (`'a'` to `'z'`).
+- Inside the loop, use an **if condition**:
+  - If the condition is met, subtract `32` from the lowercase letter to convert it to uppercase.
+  - Otherwise, print the character as is.
+
+---
+
+This document provides structured explanations for **string manipulation using pointers**, focusing on **concatenation, comparison, reversal, and case conversion**. 🚀
+
+
 
 ---
 
