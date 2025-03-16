@@ -163,6 +163,71 @@
   - Otherwise, print the character as is.
 
 ---
+# **Project: C - Even More Pointers, Arrays, and Strings**
+
+## **Task 0: memset**
+
+### **Description:**
+- The goal of this task is to **control memory** and remove garbage/random data.
+- We fill memory **byte by byte** using a `for` loop with a **constant byte** (in this case, `0x01`).
+- Initially, `b = 0x01`, so the loop first fills the actual data, and the rest is filled with `0x01`.
+- **Note:** Even the original data is modified by `0x01`, meaning the original content is altered. However, we gain **control over the uninitialized memory**.
+
+---
+
+## **Task 1: memcpy**
+
+### **Description:**
+- The goal is to **copy 10 bytes** from the **source (`src`)** to the **destination (`dest`)**.
+- The function places these copied bytes **50 bytes** after the start of `dest`.
+- After the first **50 bytes**, we find our copied **10 bytes from `src`**, while the remaining bytes in `dest` are set to `0x01`.
+- This function allows copying **any chunk of memory to any specific location** while ensuring the rest of the memory is reset.
+
+---
+
+## **Task 2: strchr**
+
+### **Description:**
+- This function searches for a **specific character (`c`)** in a given string (`s`).
+- Example from `2-main.c`:
+  ```c
+  char *s = "hello";
+  char *f;
+  f = _strchr(s, 'l');
+  ```
+  - This searches for `'l'` in `"hello"`.
+- The function prototype is:
+  ```c
+  char *_strchr(char *s, char c);
+  ```
+  - `s` is the pointer to the string.
+  - `c` is the character to find.
+- **Steps:**
+  - Use a **while loop** to iterate through `s` **until** the null terminator (`'\0'`).
+  - If the character `c` is found, return `s` (pointer to its position) and **terminate the function**.
+  - If `c` is **not found**, return `NULL`.
+
+### **Key Notes:**
+- **Difference between `NULL` and `\0` (null terminator):**
+  - `NULL` means **an empty pointer** (points to nothing).
+  - `'\0'` is **the end of a string**.
+- The condition `if (c == '\0')` ensures that if we are searching for the null terminator itself (`_strchr(s, '\0')`), it is handled correctly.
+
+---
+
+## **Task 7: Print Chessboard**
+
+### **Description:**
+- Print a **chessboard** represented as a **2D array**.
+- Use **nested loops**:
+  - Outer loop iterates through **rows (`j`)**.
+  - Inner loop iterates through **elements in each row (`i`)**.
+
+---
+
+This document provides structured explanations for **advanced pointer manipulation**, focusing on **memory management, character searching, and structured data printing**. 🚀
+
+
 
 This document provides structured explanations for **string manipulation using pointers**, focusing on **concatenation, comparison, reversal, and case conversion**. 🚀
 
