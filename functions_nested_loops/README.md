@@ -1,106 +1,67 @@
-# Holberton School - Functions and Nested Loops
+# **Project: C - Functions, Nested Loops**
 
-## Description
-This project covers fundamental C programming concepts, focusing on:
+## **Task 0: _putchar**
 
-- **Nested loops**
-- **Functions**
-- **Function prototypes**
-- **Variable scope**
-- **GCC compilation flags**
-- **Header files**
+### **Description:**
+Write a program that prints `_putchar`, followed by a new line.
 
-Each task in this project involves implementing specific C functions following Holberton's guidelines, including the use of the Betty coding style.
+### **Solution:**
+- The goal of this task is to understand **header files** (files with `.h` extension). When using multiple user-defined functions, it is better to place them in one file and call them when needed.
+- In this example, a function `_putchar.c` exists in a C file. Its function prototype `{int _putchar();}` is added to a header file called `main.h`.
+- The main script (`0-putchar.c`) includes the header file `main.h` and both the C function file and the main script must be compiled together.
 
 ---
 
-## Requirements
+## **Task 1: Print Alphabet**
 
-- Code must be compiled on **Ubuntu 20.04 LTS** using `gcc` with the flags:
-  ```bash
-  -Wall -Werror -Wextra -pedantic -std=gnu89
-  ```
-- No use of **global variables**.
-- No more than **5 functions per file**.
-- **_putchar** is allowed, but no standard C library functions (e.g., `printf`, `puts`).
-- All function prototypes must be included in **`main.h`**.
-- Each file must **end with a new line**.
-- The **Betty style** must be followed.
+### **Description:**
+Write a function that prints the alphabet in lowercase, followed by a new line.
 
----
-
-## Tasks
-
-### **0. _putchar**
-- **File:** `0-putchar.c`
-- **Description:** Prints `_putchar`, followed by a new line.
-- **Return:** `0` on success.
-
-### **1. Print Alphabet**
-- **File:** `1-alphabet.c`
-- **Prototype:** `void print_alphabet(void);`
-- **Description:** Prints the alphabet in lowercase, followed by a new line.
-- **Constraints:** `_putchar` can only be used twice.
-
-### **2. Print Alphabet x10**
-- **File:** `2-print_alphabet_x10.c`
-- **Prototype:** `void print_alphabet_x10(void);`
-- **Description:** Prints the alphabet **10 times**, each on a new line.
-- **Constraints:** `_putchar` can only be used twice.
-
-### **3. islower**
-- **File:** `3-islower.c`
-- **Prototype:** `int _islower(int c);`
-- **Description:** Checks if a character is lowercase.
-- **Return:** `1` if `c` is lowercase, `0` otherwise.
-
-### **4. isalpha**
-- **File:** `4-isalpha.c`
-- **Prototype:** `int _isalpha(int c);`
-- **Description:** Checks if a character is alphabetic (uppercase or lowercase).
-- **Return:** `1` if `c` is a letter, `0` otherwise.
-
-### **5. Print Sign**
-- **File:** `5-sign.c`
-- **Prototype:** `int print_sign(int n);`
-- **Description:** Prints the sign of a number.
-- **Return:**
-  - `1` and prints `+` if `n` is positive.
-  - `0` and prints `0` if `n` is zero.
-  - `-1` and prints `-` if `n` is negative.
-
-### **6. Absolute Value**
-- **File:** `6-abs.c`
-- **Prototype:** `int _abs(int);`
-- **Description:** Computes the absolute value of an integer.
-
-### **7. Print Last Digit**
-- **File:** `7-print_last_digit.c`
-- **Prototype:** `int print_last_digit(int);`
-- **Description:** Prints the last digit of a number.
-- **Return:** The value of the last digit.
-
-### **8. Jack Bauer**
-- **File:** `8-24_hours.c`
-- **Prototype:** `void jack_bauer(void);`
-- **Description:** Prints every minute of the day, from `00:00` to `23:59`.
-
-### **9. Times Table**
-- **File:** `9-times_table.c`
-- **Prototype:** `void times_table(void);`
-- **Description:** Prints the **9 times table** starting with `0`.
-
-### **10. Add Two Numbers**
-- **File:** `10-add.c`
-- **Prototype:** `int add(int, int);`
-- **Description:** Adds two integers and returns the result.
-
-### **11. Print to 98**
-- **File:** `11-print_to_98.c`
-- **Prototype:** `void print_to_98(int n);`
-- **Description:** Prints all natural numbers from `n` to `98`, in order.
+### **Solution:**
+- The function `print_alphabet(void);` is defined as a **void function**, meaning it takes no arguments.
+- The function runs in `1-main.c` by calling it without arguments and printing the alphabet.
+- The function uses `_putchar` with a `for` loop, and its prototype is included in `main.h`.
+- The main script and header file must be included, but `1-main.c` is not necessary.
+- Since `_putchar()` is used, `main.h` must be included in `1-print_alphabet.c`.
 
 ---
 
-This README file serves as documentation for the **Functions and Nested Loops** project at Holberton School.
+## **Task 2: Print Alphabet 10 Times**
+
+### **Description:**
+Write a function that prints the alphabet **10 times** in lowercase, followed by a new line.
+
+### **Solution:**
+- Use a **for loop** to iterate through the alphabet from `a` to `z`.
+- Use a **while loop** to print the alphabet **10 times**.
+- If `alpha == 'z'`, print `\n` and continue the loop; otherwise, continue printing.
+
+---
+
+## **Task 3: Check for Lowercase Characters**
+
+### **Description:**
+Write a function that checks if a character is lowercase.
+
+### **Solution:**
+- The function prototype is `int _islower(int c);`.
+- Returns `1` if `c` is a **lowercase letter**, otherwise returns `0`.
+- Uses an **if statement** to check if `c` falls within the range of lowercase letters (`a` to `z`).
+- If `c` is an uppercase letter (`A` to `Z`), return `0`.
+
+---
+
+## **Task 4: Check for Alphabetic Characters**
+
+### **Description:**
+Write a function that checks if a character is **alphabetic** (either uppercase or lowercase).
+
+### **Solution:**
+- The function prototype is `int _isalpha(int c);`.
+- Returns `1` if `c` is a **letter** (uppercase or lowercase), otherwise returns `0`.
+- Uses an **if statement** to check if `c` falls within the ranges of `a-z` or `A-Z`.
+
+---
+
+This document provides a structured guide to **C functions and nested loops** with an emphasis on **header files, function prototypes, and basic conditionals**. 🚀
 
