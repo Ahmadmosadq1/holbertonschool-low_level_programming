@@ -229,7 +229,6 @@ This document provides structured explanations for **advanced pointer manipulati
 
 
 
-This document provides structured explanations for **string manipulation using pointers**, focusing on **concatenation, comparison, reversal, and case conversion**. 🚀
 
 
 
