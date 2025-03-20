@@ -1,34 +1,27 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdio.h>
 /**
  * print_numbers- Entry point
  *
- * Description: This function prints a string using puts.
- * Return: Always 0 (Success)
+ * Description: varadic function for sum.
+ * @separator: pointer for checking string.
+ * @n: the number of intger numbers to sum.
+ * Return: void.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list arg;
 	unsigned int i;
 
-	/*initilizing the varidic funtion*/ 
 	(va_start(arg, n));
-	for (i = 0; i < n; i++)
+	printf("%d", va_arg(arg, int));
+	for (i = 0; i < n - 1; i++)
 	{
-		if (va_arg(arg, int) != "NULL")
-		{
-			_putchar('n');
-			_putchar('i');
-			_putchar('l');
-			}
 		if (separator)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-
-	
-
-		}
-		}
+			printf(", ");
+		printf("%d", va_arg(arg, int));
+	}
+	printf("\n");
+}
