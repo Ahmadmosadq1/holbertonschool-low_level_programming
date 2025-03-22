@@ -13,7 +13,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i = 0;
 	int j;
 	va_list arg;
 	char selector[4] = {'c', 'i', 'f', 's'};
@@ -28,21 +28,23 @@ void (*func_selector[4])(va_list) = {
 va_start(arg, format);
 while (format && format[i])
 {
-	for (j = 0; j < 4; j++)
+	j = 0;
+	while(j < 4)
 	{
 		if (format[i] == selector[j])
 		{
-			if (printed)
-				printf("%s", ", ");
+			printed ? printf(", ") : 0;
 			func_selector[j](arg);
 			printed = 1;
-			break;
+			j = 4;
 		}
+		++j;
 	}
 	i++;
 }
 
 printf("\n");
+va_end(arg);
 }
 /**
  * print_char- Entry pointt
