@@ -1,6 +1,8 @@
 #ifndef fun_vard
 #define fun_vard
 #include <stdarg.h>
+#include <stddef.h>
+
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

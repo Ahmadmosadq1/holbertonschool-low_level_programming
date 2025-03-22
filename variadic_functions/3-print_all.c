@@ -30,7 +30,7 @@ va_start(arg, format);
 while (format && format[i])
 {
 	j = 0;
-	while(j < 4)
+	while (j < 4)
 	{
 		if (format[i] == selector[j])
 		{
@@ -93,9 +93,6 @@ void print_string(va_list arg)
 {
 	char *str = va_arg(arg, char *);
 
-	if (str == NULL)
-		printf("%s", "(nil)");
-	printf("%s", str);
+	printf("%s", str ? str : "(nil)");
+
 }
-
-
