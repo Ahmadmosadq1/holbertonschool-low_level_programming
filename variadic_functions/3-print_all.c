@@ -94,8 +94,7 @@ void print_string(va_list arg)
 
 	if (str == NULL)
 		printf("%s", "(nil)");
-	else
-		printf("%s", str);
+	printf("%s", str);
 }
 
 
