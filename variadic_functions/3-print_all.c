@@ -66,7 +66,7 @@ void print_int(va_list arg)
 	{
 		printf("%d", va_arg(arg, int));
 	}
-}
+
 /**
  * print_float- Entry pointt
  *
@@ -78,7 +78,7 @@ void print_float(va_list arg)
 	{
 		printf("%f", va_arg(arg, double));
 	}
-}
+
 /**
  * print_string- Entry pointt
  *
