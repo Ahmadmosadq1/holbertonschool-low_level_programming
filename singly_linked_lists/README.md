@@ -11,6 +11,7 @@ Is that right
 
 2-add_node.c:
 
+- this task assums the list already has a NULL so we only create a new node and assign its ptr to node to the next old node.
 f I have a pointer called head, which points to a value like x (e.g. head = &x), and I pass it to a function as fun(int *head), then:
 
 I'm only passing a copy of the address of x
