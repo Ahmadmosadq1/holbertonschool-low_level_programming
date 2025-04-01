@@ -8,3 +8,29 @@ Is that right
 1-list_len.c.
 
 - calculating the length of the node by iterating(h->next) and increase count every loop
+
+2-add_node.c:
+
+f I have a pointer called head, which points to a value like x (e.g. head = &x), and I pass it to a function as fun(int *head), then:
+
+I'm only passing a copy of the address of x
+
+I can change the value of x using *head = 42 — this affects main()
+
+But if I do something like head++ inside the function, I’m only changing the local copy of the pointer
+
+The original pointer in main() stays the same — it’s not affected
+
+So in this case, we cannot change the pointer itself in main() — only the value it points to.
+
+But if I pass &head and receive it as int **head, then:
+
+Now I have access to the pointer itself in main()
+
+I can change the address it holds using *head = malloc(...) — this changes the pointer in main()
+
+I can also change the value it points to using **head = 48
+
+✅ Both the pointer and the value can now be changed and will affect main()
+
+
