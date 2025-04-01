@@ -33,4 +33,10 @@ I can also change the value it points to using **head = 48
 
 ✅ Both the pointer and the value can now be changed and will affect main()
 
+- in this task, we are trying to create a new node by taking (&head, str).
+- we will receive (&head) with (int **head), so we have to create dynamic memory for the new node.
+- we will do this by *head = malloc(sizeof(list_t)). this will return the new address of the new node.
+- so to access head node's str field, we have to use (*head)->str.. as *(head->str) is wrong since node has multiple fields and needs to be specified.
+- we also have to assign the new ptr to node for the new node to close the list by (*head)->next = NULL.
+- so to make sure this node is the first node, we have to assign head’s ptr to node (the reference) to the address of the new node, which was already done with *head = malloc
 
