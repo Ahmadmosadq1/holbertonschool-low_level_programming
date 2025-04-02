@@ -3,8 +3,13 @@
 - we are printing the lists of the nodes..we have the hello node which created in the stack and has a value of 8..and then, we have new value which has the address of hello
 - reference [address of new] ---> [NULL] new [hello] ---> [new] hello [NULL]”
 
-1. dlistint_len.c:
+1. 1. List length
 - simple looping with (h->next) with counting.
+
+2. Add node:
+- In the task, I completely understood why we need the temp struct variable. Now I have a new understanding of why we do temp = *head. head here is actually not a node — it's more like a reference that holds the address of the first node and represents the beginning of the list.
+
+- We don't want to lose the value of head, so we copy it into a temp variable. Then, the temp value is used to attach the old head to the new head. After constructing the new node, we can safely do *head = new. This way, we preserve the original head without losing it.
 
 
 3. Add node at the end
