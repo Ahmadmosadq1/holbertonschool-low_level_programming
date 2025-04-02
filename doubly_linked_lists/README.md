@@ -34,3 +34,6 @@
     - Free the current node (free the one we just passed)
     - Then assign `head = temp`, and repeat the process.
 
+5. Get node at index:
+
+- we write a function that returns any node using the for loop and rest is just typical for loop.
