@@ -24,4 +24,13 @@
 - With this, we closed the list from both sides (next and prev), creating the double link from the last node to the new one.
 - And we're done.
 
-- 
+4. Free List
+
+- Please note that `int **head` is a pointer to a pointer to a node, meaning it allows you to change the head itself (not just the node contents).
+- `int *head` is a pointer to a node, which lets you modify nodes (like deleting or inserting), but not the actual head pointer.
+- To free a list, we first make sure the head pointer is not NULL — meaning the list is not empty.
+- If it's not, then we use a loop: `while (head != NULL)`. In each loop, if the current head is not NULL, we:
+    - Move to the next node using `temp = head->next`
+    - Free the current node (free the one we just passed)
+    - Then assign `head = temp`, and repeat the process.
+
