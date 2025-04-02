@@ -47,3 +47,9 @@ I can also change the value it points to using **head = 48
 - after creating a malloc, we dont need to free malloc if malloc == NULL beacuse it faild and no memeroty was allocated.
 - but, if malloc succeeeded and we started to fill it with str..if str points to NULL, then in this case, we have to free the malloc we created it for free(malloc)
 - then we must check if the list is empty ..if *head == NULL, if it not empty , then we assign the head node address to new, otherwise,we keep going untill we find it.
+
+4-free_list?
+
+- we have to free the list of each node by node. we first have to make temp = head in each iteration. we move head to points to node b and temp pints to A
+- we have to free both (temp->str) and (temp) the memeoy itself.
+- then in the next iteration, temp will equal to the next node , temp = head and head will move to the next node and the current node (b) will be cleared both the memeroy and its conent abd so on.
