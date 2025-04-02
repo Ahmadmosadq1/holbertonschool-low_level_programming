@@ -41,3 +41,9 @@ I can also change the value it points to using **head = 48
 - we also have to assign the new ptr to node for the new node to close the list by (*head)->next = NULL.
 - so to make sure this node is the first node, we have to assign head’s ptr to node (the reference) to the address of the new node, which was already done with *head = malloc
 
+
+3-add_node_end:
+- to add a node at the end of the node list, we first, must allocate a memeory for the new node.
+- after creating a malloc, we dont need to free malloc if malloc == NULL beacuse it faild and no memeroty was allocated.
+- but, if malloc succeeeded and we started to fill it with str..if str points to NULL, then in this case, we have to free the malloc we created it for free(malloc)
+- then we must check if the list is empty ..if *head == NULL, if it not empty , then we assign the head node address to new, otherwise,we keep going untill we find it.
