@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 		_putchar(0 + '0');
 		return;
 	}
-	for (bit = 31; bit >= 0; bit--)
+	for (bit = 63; bit >= 0; bit--)
 		if ((n >> bit) & 1)
 			break;
 	for (; bit >= 0; bit--)
