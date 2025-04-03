@@ -2,10 +2,26 @@ Task 0:
 
 - it is just converting string binary number to unsigned int.
 
-1-print_binary:
 
-- we are converting a decimal number to binary number using bitwise oos(i.e & and >>).
-- when it comes to bitwise ops, we have to think of decimal number as a block of binary number.
-- bitwaise deals with binary. so, we get the first LSB by (n & 1) which is equavelent to the logical op (%1). that gets the last bit.
-- then, we shift or move the whole block to the right side once by (n >> 1) to get to the second LSB and apply (n & 1) ans so on.
-- in case we have n = 0, when doing (n & 1), it will be skipped since while(0) is false, so we have to add a condition if n = 0, just resturn (0).
+1 - print_binary:
+
+- We assume the largest size for an int is 4 bytes (32 bits) and use a for loop to print out the binary number.
+- To print the exact number of bits for a decimal number with no sign and no BS, the MSB should always be 1.
+- We loop from the MSB of the 32-bit binary number, starting at bit 31 and decrementing by 1, shifting until the condition ((n >> bit) & 1) is True.
+- (n >> bit) shifts the number to the right — for example, 5 in binary is 00101.
+- The first loop checks from the 31st bit down to 0, each time checking ((n >> bit) & 1).
+- If ((n >> bit) & 1) == 0, meaning the result is 0, the condition is False and we continue the loop.
+- Once we reach the bit that contains the first 1 — for 5 (binary 101), the condition becomes True and breaks the loop with bit = 2.
+- Then we do a second loop starting from bit = 2 and decrement to 0, printing each bit using ((n >> bit) & 1).
+
+First loop:
+5 >> 3 = 0001, 0001 & 1 = 1 ✅
+
+Second loop:
+5 >> 2 = 0001, 0001 & 1 = 1 ✅
+
+Last loop:
+5 >> 1 = 0010 (which is 2), 0010 & 1 = 0 ❌
+
+- This method ensures we print only the meaningful binary digits without any leading zeros.
+
