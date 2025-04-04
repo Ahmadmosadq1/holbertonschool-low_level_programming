@@ -30,3 +30,14 @@ Last loop:
 - first, we make sure that index is withing the range by returning (-1) if index is >= 64.
 - then, we can retun any idext using (n >> index) & 1...
 
+3 - set_bit:
+
+- We need to set a bit to 1 by using 1 << index.
+- To do that, let us say we have n = 5 (00000101) and we want to change bit number 3 to 1.
+- We do: 1 << 3 → 00001000.
+- Now we do the bitwise OR (|) between n and (1 << 3):
+  00000101
+| 00001000
+  --------
+  00001101 → which is 13
+

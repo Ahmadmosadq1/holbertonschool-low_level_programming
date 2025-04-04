@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - Entry point
+ * set_bit - Entry point
  *
- * Description :prints number from 0 to 9 using _putchar
- *.
- * Return: void.
+ * Description :sets any bit index to one
+ * @n :the integer number
+ *@index: the bit index
+ * Return: 1.
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
