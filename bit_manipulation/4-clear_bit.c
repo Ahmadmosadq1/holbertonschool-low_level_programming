@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - Entry point
+ * clear_bit - Entry point
  *
- * Description :prints number from 0 to 9 using _putchar
- *.
+ * Description :reset the index bit to zero
+ *
+ * @n: the inger number
+ * @index: the bit index
  * Return: void.
  */
 
@@ -15,5 +17,3 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	*n = *n & ~(1 << index);
 	return (1);
 }
-	
-

@@ -40,4 +40,6 @@ Last loop:
 | 00001000
   --------
   00001101 → which is 13
+4-Clear_bit:
 
+- just like pervious task except, we invert (1 << index) mask and do AND bitwise with n like so (n = n &(1 << index))
