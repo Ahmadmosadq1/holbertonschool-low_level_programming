@@ -25,3 +25,8 @@ Last loop:
 
 - This method ensures we print only the meaningful binary digits without any leading zeros.
 
+2- get_bin_int:
+
+- first, we make sure that index is withing the range by returning (-1) if index is >= 64.
+- then, we can retun any idext using (n >> index) & 1...
+

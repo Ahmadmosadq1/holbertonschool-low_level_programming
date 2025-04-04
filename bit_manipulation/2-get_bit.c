@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * print_numbers - Entry point
+ * get_bit- Entry point
  *
- * Description :prints number from 0 to 9 using _putchar
- *.
- * Return: void.
+ * Description :prints any bit of a binary number
+ *
+ * @n: the unsigned ineger number
+ * @index: the bit to printed
+ * Return: index.
  */
 
 int get_bit(unsigned long int n, unsigned int index)
