@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - Entry point
+ * flip_bits - Entry point
  *
- * Description :prints number from 0 to 9 using _putchar
+ * Description :compare n and m bit by bit using XOR
+ *
+ * @n: num#1
+ * @m: num#2
  *.
  * Return: void.
  */
