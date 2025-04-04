@@ -43,3 +43,11 @@ Last loop:
 4-Clear_bit:
 
 - just like pervious task except, we invert (1 << index) mask and do AND bitwise with n like so (n = n &(1 << index))
+
+
+5 - flip_bits:
+
+- Here, we want to know how many bits to flip when going from one number to another.
+- We use (n >> i) & 1 and XOR with (m >> i) & 1 because XOR is only true if n and m bits are different.
+- We are using >> to isolate each bit from LSB to MSB and compare them one by one.
+
