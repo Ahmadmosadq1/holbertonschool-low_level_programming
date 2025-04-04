@@ -5,7 +5,7 @@
 #include <fcntl.h>
 
 /**
- * main - read_textfile
+ * read_textfile - Entry point
  *
  * Description: This function writes a text from a file to a buffer
  * @filename: the textfile to copy from.
