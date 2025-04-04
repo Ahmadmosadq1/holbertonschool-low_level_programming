@@ -44,3 +44,25 @@
 - We first initialize a temporary pointer using `temp = head`.
 - Then we loop through the list using `while (temp != NULL)` and perform the summing.
 
+7. Insert at index:
+
+- In this exercise, we are trying to insert a node in a list. It is a good exercise to keep our head reference unmodified by creating a temp and also temp_prev (for temp->prev) variables so all things will be in order.
+
+- When inserting a node in a list, we have to consider 3 possibilities:
+
+A – Inserting the node at the beginning of the list (i.e., idx = 0).  
+     In this case, we have to ground the new->prev and make new->next = *h.  
+     If *h is not NULL, we also make (*h)->prev = new.
+
+B – Inserting a node that points to NULL, meaning idx is out of range.  
+     So if we were given (idx = 3), we have to loop before the index by (idx - 1) and check.  
+     If (temp), meaning there is an available node, then it is good. Otherwise, return NULL.  
+     We also do this check to avoid segfaults that might cause a crash.
+
+C – Inserting a node within the list, meaning it has temp (the next node) and temp_prev (the node before).  
+     For this case, we do:  
+     new->next = temp and new->prev = temp_prev.  
+     We also need to check the edges of each of the side nodes:  
+     if (temp) → temp->prev = new  
+     and if (temp_prev) → temp_prev->next = new
+
