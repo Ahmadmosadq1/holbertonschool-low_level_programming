@@ -19,6 +19,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	for (; bit > index; bit--)
 	{
+		if (index > bit)
+			return (-1);
 		if (bit == index)
 			break;
 	}
