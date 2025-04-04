@@ -2,16 +2,11 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - Entry point
- *
  * Description :inserting a node in a list.
- *
  * @h: head node referance.
- *
  * @idx: idx: the node index.
- *
  * @n: the data.
  * Return: new.
  */
@@ -25,7 +20,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-
 	if (idx == 0)
 	{
 		new->prev = NULL;
@@ -35,11 +29,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-
 	for (count = 0; count < idx - 1; count++)
 	{
-
-	if (!temp)
+		if (!temp)
 	{
 		free(new);
 		return (NULL);
