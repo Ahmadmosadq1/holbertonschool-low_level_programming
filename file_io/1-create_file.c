@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	int w_fd;
 	char buffer[2024];
-	char *reader;
+	char reader;
 	int i = 0;
 	int j = 0;
 	
@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	reader = read(STDIN_FILENO, buffer, 2024);
-	if (reader = -1)
+	if (reader == -1)
 		return (-1);
 	while (i < reader)
 		j++;
@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	for (; i < j; i++)
 		text_content[i] = buffer[i];
-	text_contet[i] = '\0';
+	text_content[i] = '\0';
 	w_fd = write(fd, text_content, j);
 	if (w_fd == -1)
 		return (-1);
