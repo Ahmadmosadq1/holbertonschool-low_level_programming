@@ -35,25 +35,28 @@ int main(int ac, char **av)
         exit(99);
     }
 
-    while ((r = read(f_from, buf, 1024)) > 0)
-    {
-        w = write(f_to, buf, r);
-        if (w == -1 || w != r)
+    do {
+        r = read(f_from, buf, 1024);
+        if (r == -1)
         {
-            dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+            dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
             close(f_from);
             close(f_to);
-            exit(99);
+            exit(98);
         }
-    }
-
-    if (r == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-        close(f_from);
-        close(f_to);
-        exit(98);
-    }
+        
+        if (r > 0)
+        {
+            w = write(f_to, buf, r);
+            if (w != r)
+            {
+                dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+                close(f_from);
+                close(f_to);
+                exit(99);
+            }
+        }
+    } while (r > 0);
 
     if (close(f_from) == -1)
     {
